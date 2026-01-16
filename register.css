@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+form {
+    background-color:rgb(243, 238, 238);
+    padding: 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 calc(33.33% - 20px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    width: 100px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: right;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select {
+    flex: 1;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-footer {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+    color: white;
+}
+
+p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+p[style*="red"] {
+    color: red;
+}
+
+p[style*="green"] {
+    color: green;
+}
+
+@media (max-width: 992px) {
+    .form-group {
+        flex: 1 1 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        flex: 1 1 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: auto;
+        text-align: left;
+    }
+
+    .form-footer {
+        justify-content: stretch;
+    }
+
+    button {
+        width: 100%;
+    }
+}
