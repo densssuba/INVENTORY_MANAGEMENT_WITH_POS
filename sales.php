@@ -34,7 +34,7 @@ if (!empty($search)) {
     $sql .= " AND (cashier_name LIKE '%$search%' OR product_name LIKE '%$search%')";
 }
 
-// 2. Strict Date Filtering
+
 if (!empty($from_date) && !empty($to_date)) {
     $sql .= " AND created_at BETWEEN '$from_date 00:00:00' AND '$to_date 23:59:59'";
 } elseif (!empty($from_date)) {
@@ -328,4 +328,5 @@ function printReport() {
 
 </body>
 </html>
+
 <?php $conn->close(); ?>
